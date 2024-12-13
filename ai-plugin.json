@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "News Fetcher",
+  "name_for_model": "newsfetcher",
+  "description_for_human": "Obtén las últimas noticias de fuentes confiables.",
+  "description_for_model": "Usa este plugin para buscar las últimas noticias financieras y económicas.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": https://ia-hnovigo.github.io/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://ia-hnovigo.github.io/logo.png",
+  "contact_email": "ia.hnovigo@gmail.com",
+  "legal_info_url": "https://ia-hnovigo.github.io/tos"
+}
