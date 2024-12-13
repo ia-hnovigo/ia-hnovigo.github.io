@@ -1,0 +1,38 @@
+openapi: 3.0.1
+info:
+  title: News Fetcher API
+  version: "1.0.0"
+  description: Esta API obtiene noticias de NewsAPI.
+servers:
+  - url: https://ia-hnovigo.github.io/
+paths:
+  /latest-news:
+    get:
+      operationId: getLatestNews
+      summary: Obtiene las últimas noticias sobre un tema.
+      parameters:
+        - in: query
+          name: q
+          required: true
+          schema:
+            type: string
+          description: El término de búsqueda, por ejemplo "mercados financieros".
+      responses:
+        '200':
+          description: Retorna las últimas noticias
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  articles:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                        description:
+                          type: string
+                        url:
+                          type: string
